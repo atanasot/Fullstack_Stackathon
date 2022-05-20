@@ -14,6 +14,7 @@ class Dashboard extends Component {
       loading: true,
       displayMessages: false,
       displayCreated: false,
+      playlistId: "",
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -67,6 +68,9 @@ class Dashboard extends Component {
       }
     );
     const playlistId = playlistResponse.body.id;
+    this.setState({
+      playlistId,
+    });
     let tracks = [];
     let seenArtistIds = {};
     for (let i = 0; i < this.state.events.length; i++) {
@@ -124,10 +128,10 @@ class Dashboard extends Component {
   render() {
     if (this.state.loading) return <h2>Loading...</h2>;
 
-    const { city, events, displayMessages, displayCreated } = this.state;
+    const { city, events, displayMessages, displayCreated, playlistId } =
+      this.state;
     const username = this.state.me.body.display_name;
     const { onChange, onSubmit, createPlaylist } = this;
-
     return (
       <div>
         <h1>
@@ -151,7 +155,7 @@ class Dashboard extends Component {
           Create Playlist
         </button>
         {displayMessages ? <Question /> : null}
-        {displayCreated ? <PlaylistCreated /> : null}
+        {displayCreated ? <PlaylistCreated playlistId={playlistId} /> : null}
       </div>
     );
   }
