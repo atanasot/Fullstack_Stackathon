@@ -21,8 +21,7 @@ app.get("/", async (req, res, next) => {
 
 app.get("/login", function (req, res) {
   var state = Math.floor(Math.random() * 10000000000);
-  var scope =
-    "user-read-private user-read-email playlist-read-collaborative playlist-modify-public playlist-read-private playlist-modify-private user-library-modify user-library-read user-top-read user-read-playback-position user-read-recently-played user-follow-read user-follow-modify user-read-playback-state user-modify-playback-state user-read-currently-playing";
+  var scope = "user-read-private playlist-modify-public";
 
   res.redirect(
     "https://accounts.spotify.com/authorize?" +
