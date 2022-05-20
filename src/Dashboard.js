@@ -147,13 +147,15 @@ class Dashboard extends Component {
             ? []
             : events.map((event, idx) => <li key={idx}>{event.artist}</li>)}
         </ul>
-        <button
-          onClick={createPlaylist}
-          disabled={!this.state.city}
-          id="playlist-button"
-        >
-          Create Playlist
-        </button>
+        {events.length ? (
+          <button
+            onClick={createPlaylist}
+            disabled={!this.state.city}
+            id="playlist-button"
+          >
+            Create Playlist
+          </button>
+        ) : null}
         {displayMessages ? <Question /> : null}
         {displayCreated ? <PlaylistCreated playlistId={playlistId} /> : null}
       </div>
