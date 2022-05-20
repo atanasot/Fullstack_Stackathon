@@ -1,5 +1,18 @@
-To start:
-export CALLBACK_URI=http://localhost:8888/callback
-export CLIENT_ID=c8255b5e0fce4954811ba7dd7966d2a7
-export CLIENT_SECRET=<put secret here>
-npm run start:dev
+# Who is in town?!
+
+Interested in going to a concert in town but don't know who to pick?
+Use this app to create a Spotify playlist on your account with popular songs from the artists coming to town!
+
+Deployed at https://who-is-in-town.herokuapp.com/
+
+** User email needs to be added on the Spotify app, please message me if you want access
+
+Technologies used: 
+- Node.js
+- JavaScript
+- CSS
+- React
+- Spotify API
+- TicketMaster API
+
+
