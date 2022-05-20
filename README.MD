@@ -5,12 +5,13 @@ Use this app to create a Spotify playlist on your account with popular songs fro
 
 Deployed at https://who-is-in-town.herokuapp.com/
 
-** User email needs to be added on the Spotify app, please message me if you want access
+> **User email needs to be added on the Spotify app, please message me if you want access**
 
 Technologies used: 
 - Node.js
 - JavaScript
 - CSS
+- HTML
 - React
 - Spotify API
 - TicketMaster API
